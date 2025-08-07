@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--meta PROPORCIONA METADATOS COMO LA CODIFICACION DE CARACTERES Y LA CONF DE LA VISTA-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!--CSS-->
+   <link rel="stylesheet" href="style.css">
+    
+    <title>Dirección Y Contacto</title>
+</head>
+<body>
+
+    <!--el Header Define un encabezado para el documento o una seccion-->
+
+    <header>
+        <!--el nav contiene enlaces de navegacion--> 
+   
+    </header>
+    <main>
+        <section>
+
+        <h1 class="titulos">Dirección y Contacto</h1>
+        
+ <nav>
+        <!--los enlaces se hacen con la etiqueta a-->
+        <!--la imagen se agrega con la etiqueta img-->
+        <!--es Enlace absoluto es el que apunta a un recurso externo, por ejemplo una pagina web como instagram del jardin -->
+        <!--Enlaces relativos movernos entre paginas, dentro de nuestro proyecto -->
+        <!--Enlace Interno, seccion especifica de mi misma pagina-->
+        <!--lista ordenada con ol-->
+        <!--lista desordenada con ul-->
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="contenido.html">Contenido</a></li>
+            <li><a href="equipo.html">Equipo</a></li>
+            <li><a href="especialidad.html">Especialidad</a></li>
+        </ul>
+    </nav>
+        <p>Estamos de 7:30 a 17 hs de L a V </p>
+
+       <!--Enlace interno | el ID se crea con el simbolo # seguido del nombre de la sección-->
+
+       <a href="#correo">correo electronico</a>
+
+       <section id="correo">
+       <p></p>
+
+       </section>
+
+    <!--Tablas | para organizarnos con los emails-->
+    <table> <!--Contenedoras de la tabla--> <!-- tienen que tener las etiquetas contenedoras y dentro estan las etiquetas tr-->
+    <tr></tr> <!--defienen una fila o las filas de nuestra tabla, como los renglores-->
+    <th></th>  <!--etiqueta th es el ENCABEZADO de una tabla-->
+    <td></td> <!--son las mas importantes, son las celdas de estos datos , las celdas de nuestra tabla-->
+      <!-- las td describen lo que se pide en los encabezados th-->
+    <tr>
+     <th></th> <!--Los encabezados-->
+     
+    </tr>
+    <th>Telefono</th> <!--defiden una fila-->
+   
+    <td>42235768</td>  <!-- Las celdas-->
+
+    </tr>
+    <th> email</th>
+    <td>jardin938@gmail.com</td>
+
+    </tr>
+        
+    </table>
+    
+        <!--Formularios--> <!--la etiqueta form que viene con 2 elemento mas el action y method-->
+        <!--atributo action se defiene donde se va enviar este formulario , se defien la url -->
+        <!--el metodo de envio es por medio del atributo method el post-->
+        <form action="/submit" method="post">  <!--form es la Etiqueta contenedora del formulario-->
+
+        <!--todos las etiquetas van acompañadas de un label-->
+        
+        <br>
+        
+        <label for="Actividades">Actividades</label>
+        <select name="" id="">
+            <option value="">Herramientas Pedagogicas</option>
+            <option value="">Juegos Didacticos</option>
+            <option value="">Salidas Recreativas</option>
+        </select>
+       
+       <label for="turno mañana">turno mañana</label>
+       <input type="time" name="" id="">
+       
+       <label for="turno tarde">turno tarde</label>
+       <input type="time" name="" id="">
+
+    </section>
+    </main>
+    <footer>
+        <P>&COPY;2025 Mi primer sitio web. Todos los Derechos Reservados</P>
+    </footer>
+</body>
+</html>
