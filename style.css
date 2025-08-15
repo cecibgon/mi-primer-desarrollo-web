@@ -1,240 +1,113 @@
-/* 1 se crea un Selector + propiedad + valor
-la sintaxis es asi , 
-selector es una etiqueta el html{  
-propiedad, es u  atributo por ejemplo el valor
+@charset "UTF-8";
+/*Anidamiento, puedo poner estilos a cada parte*/
+header {
+  background-color: #fe7ea9;
 }
-*/
-
-/*color: blue;*/
-/*nombre de color, hexadecimal,rgh y rgba*/
-/*color: color:#B2D6F9;*/
-/*color: rgb(0,0,255);*/
-/* font-size o los tamaños se pueden expresar en dif unidades, son las unidades de medidas, pixeles, em , rem o % */
-/*generalmente todo lo de texto se utiliza con px , 
-y todo lo que tiene que ver con ancho y alto con mas anchos con %*/
-
-p{
-color: #f88989;
-font-style: italic;
-font-size: 30pv;
-text-align: center;
-
+header nav {
+  padding: 10%;
 }
-
-h1{
-   color:#da0707
-   text-align: center;
-   margin: 80px;
-   font-size: 80px;  /*unidades de medidas, o tamaños, se pueden expresar en dif unidades */
-  /*para algunas cosas vamos a usar pixeles px, em rem y %*/
-  /*todo lo referido a texto es com pixeles y todo lo de anchos y altos es con %*/
- 
+header nav ul {
+  line-height: inside;
 }
-
-body {
-    background-color:hsl(311, 64%, 85%);
-    text-align: left;
-    font-size: 40px;
-
-}
-
-
-div {
-   color:rgb(54, 10, 111);
-}
-
-span{
-  color:#750b74;
-  text-align: left;
-  
-}
-
-h2{
-    color: #a81cf3;
-    font-size:40px;
-    text-align:center;
-}
-
-.titulos {
- color: rgb(226, 43, 223);
- text-transform: uppercase; 
- font-size: 50px;
- text-align: center;
-}
-
-.imagen {
-    width: 50vw; /* La imagen ocupará el 50% del ancho de la ventana del navegador */
-    height: auto;
-}
-
-.video {
-  width: 60%;
-  height: 400px; /* O un alto fijo */
-  }
-
-.titulos-parrafos{
-color: rgb(13, 103, 103);
-text-align: center;
-font-size:30px;
-}
-.presentacion-equipo{
-     color: rgb(71, 3, 39);
-}
-.titulos-contenido {
-    color: rgb(230, 96, 170);
-}
-
-
-.titulos-espacio{
-   color:rgb(73, 73, 225)
-        }
-
-    
-.titulos-especialidad {
-    color:rgb(255, 235, 205)
-    }
-
-     /* width es el ancho y ademas de pixeles se pueden utilizar porcentajes %*/
-     /* height es la altura se pueden usar unidades relativas , vh es la altura de la ventana de nuestro navegador*/ 
-     /*flex grow nos permite cambiar el ancho de las cajas de manera flexible*/
-
-
-.caja{
-width: 50%;/*ancho en pixeles */
-height: 30vh;  /*alto en pixeles */
-background-color: rgb(216, 240, 240);
-border:3px solid blue; /*el borde lleva 3 valores, el tamaño, el estilo d borde
-y el color*/
-text-align: center;
-line-height: 100px;
-margin: 10px;  /* para que se separen las cajas entre ellas*/
-
-/* Flex grow nos permite cambiar el ancho de las cajas de manera flexible*/
-}
-
-.caja-ini{
-  flex-grow: 2;
+header nav ul li {
   text-align: center;
 }
 
-
-.inline{
-  display:inline;
-  color: #a81cf3;
-  font-weight: bold;
+/* Scss*/
+div {
+  width: 100%;
+}
+div p {
+  font-family: "Times New Roman", Times, serif;
 }
 
-.contenedor {
-  display: flex;  /*asi se Activa flexbox*/
-  flex-wrap: wrap; /* Flex grow nos permite cambiar el ancho de las cajas de manera flexible*/
-  align-content: space-between; /* Con aligan-items puedo alinear verticalmente los elementos*/
- }
+/*En Sass tenemos 2 sintaxis, 
+uno Sass y Scss, 
+en scss es la que estamos usando arriba
+va con corchetes
 
-.grid-container{   /*tipo grillas*/
-display: grid;   /*Definimos grillas*/ 
-grid-template-columns:repeat(4, 1fr); /*definimos columnas*/
-justify-items: center;
+Y en Sass no se utiliza los caracteres 
+especiales.
+div
+    width: 100%;
+    p
+    font-style: initial;
 
+Esto es Scss
+div{
+    width: 100%;
+    p{
+    font-style: initial;
+}
+}
+*/
+/*Dentro de los parentesis nosotros podemos añadir un 
+paretensis vacio, podemos decidir que valor
+le pondremos en el futuro. y es cuando de
+decidimos usar ese mixin en nuestro scss
+el radius esta vacio sin valor, lo dejo a la
+espera */
+/*Scss version scss*/
+.caja {
+  border-radius: 10px;
 }
 
-/*style.css para mobile*/
+.mapa {
+  border-radius: 10px;
+}
+
+/*Sass version sass
+
+@mixin border-radius($radius) 
+  border-radius: $radius;
+
+.caja
+@include border-radius(10px)
+
+.mapa 
+  @include border-radius(10px);
+*/
+.orange-bg {
+  background-color: orange;
+}
+
+.pink-bg {
+  background-color: pink;
+}
+
+.blue-bg {
+  background-color: blue;
+}
+
+.primary-bg {
+  background-color: #FFA500;
+}
+
+.secundary-bg {
+  background-color: #f35824;
+}
+
+.danger-bg {
+  background-color: #ff3700;
+}
+
+/*version scss con corchetes
 body{
-   font-family: 'Gill Sans', Arial, Helvetica, sans-serif;
-   margin:0;
-   padding:0;
+
+    background-color: $primary-color;
 }
-
-h1{
-   font-size: 1.5em;
-}
-
-h2 {
-
-  font-size: 1.2em;
-}
-
-p{
-  font-size: 1em;
-}
-
-/*style.css para Media query para tabletas*/
-@media (min-width: 600px)
-
+*/
+/*version Sass sin lo corchetes y en su archivo
+style.sass y el comando de compilacion
+seria style.sass*/
 body {
-  padding: 20px;
+  background-color: #fe7ea9;
 }
 
-header, main, footer {
-padding: 20px;
-text-align: left;
+/* archivo: _imagenes.scss */
+.imagen {
+  width: 30%;
+  height: auto;
 }
 
-h1{
-font-size: 2em;
-}
-
-h2{
-font-size: 1.5em;
-}
-
-p{
-font-size: 1.2em;
-}
-
-/*style.css para computadoras escritorio*/
-@media(min-width:1024px)
-     body{
-     max-width: 1200px;
-     margin:0 auto;
-    }
-     header,footer {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     }
-
-     nav ul {
-    justify-content: flex-end;
-    padding:  0;
-     }
-
-.navbar{
-background-color: #f8d789;
-}
-
-.navbar ul {
-display: flex;
-list-style: none;
-padding:  0;
-margin:  0;
-}
-.navbar li {
-margin:0 15px;
-color: #1178de;
-padding: 15px 20px;
-display: block;
-width: 75%;
-}
-.navbar a {
-color: #a81cf3;
-padding: 15px 20px;
-display: block;
-width: 75%;
-}
-
-.container{
-  
-display: flex;
-}
-
-/*Elementos y con # se busca el color */
-.sidebar{
-width: 25%;
-background-color: #f88989;  /*con # se busca el color */
-padding: 20px;
-}
-.main-content{
-width: 75%;
-background-color:#ebd174;
-padding: 20px;
-}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,7 @@
+$colors: orange,pink,blue;
+
+@each $color in $colors {
+  .#{$color}-bg {
+    background-color: $color;
+  }
+}

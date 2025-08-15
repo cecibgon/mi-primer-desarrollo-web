@@ -1,0 +1,79 @@
+/*Anidamiento, puedo poner estilos a cada parte*/
+
+header{
+    background-color: $primary-color;
+    nav{
+        padding: 10%;
+        ul{
+           line-height: inside;
+            li{
+                text-align: center;
+            }
+        }
+    }
+}
+
+/* Scss*/
+div{
+ width: 100%;
+    p{
+      font-family: 'Times New Roman', Times, serif;
+
+    }
+  
+}
+   
+
+/*En Sass tenemos 2 sintaxis, 
+uno Sass y Scss, 
+en scss es la que estamos usando arriba
+va con corchetes
+
+Y en Sass no se utiliza los caracteres 
+especiales.
+div
+    width: 100%;
+    p
+    font-style: initial;
+
+Esto es Scss
+div{
+    width: 100%;
+    p{
+    font-style: initial;
+}
+}
+*/
+
+/*Dentro de los parentesis nosotros podemos añadir un 
+paretensis vacio, podemos decidir que valor
+le pondremos en el futuro. y es cuando de
+decidimos usar ese mixin en nuestro scss
+el radius esta vacio sin valor, lo dejo a la
+espera */
+
+/*Scss version scss*/
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+.caja{
+@include border-radius(10px)
+}
+
+.mapa {
+  @include border-radius(10px);
+}
+
+/*Sass version sass
+
+@mixin border-radius($radius) 
+  border-radius: $radius;
+
+.caja
+@include border-radius(10px)
+
+.mapa 
+  @include border-radius(10px);
+*/
+

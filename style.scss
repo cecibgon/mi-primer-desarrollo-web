@@ -1,0 +1,27 @@
+@import "variables";
+@import "header";
+@import "lista";
+@import "maps";
+
+/*version scss con corchetes
+body{
+
+    background-color: $primary-color;
+}
+*/
+
+/*version Sass sin lo corchetes y en su archivo
+style.sass y el comando de compilacion
+seria style.sass*/
+
+body{
+
+    background-color: $primary-color;
+}
+/* archivo: _imagenes.scss */
+
+.imagen {
+  width: 30%;
+  height: auto;
+}
+
