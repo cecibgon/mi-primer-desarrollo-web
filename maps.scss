@@ -1,0 +1,12 @@
+$colors-map:(
+  primary: #5babe0,
+  secondary: #f0f0f0,
+  accent: #ff4081
+);
+
+/*directiva each*/
+@each $name, $color in $colors-map {
+  .#{$name}-bg {
+    background-color: $color;
+  }
+}

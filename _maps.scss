@@ -1,0 +1,11 @@
+$color-map: (
+  primary: #FFA500,
+  secundary: #f35824,
+  danger: #ff3700
+);
+
+@each $name, $color in $color-map {
+  .#{$name}-bg {
+    background-color: $color;
+  }
+}
